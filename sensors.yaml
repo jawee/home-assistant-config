@@ -50,3 +50,17 @@
   duration:
     days: 7
   end: "{{ now() }}"
+
+- platform: history_stats
+  name: Plex Streaming Hours last 7 days
+  entity_id: sensor.plex_proxmox_plex
+  state:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+  duration:
+    days: 7
+  end: "{{ now() }}"

@@ -29,12 +29,19 @@ views:
       - type: entities
         entities:
           - entity: scene.slackt_nedanvaning
+            icon: "mdi:lightbulb-off-outline"
           - entity: scene.tant_nedanvaning
+            icon: "mdi:lightbulb-outline"
           - entity: scene.mysbelysning_nedanvaning
+            icon: "mdi:lightbulb-outline"
           - entity: scene.smartplugs_pa
+            icon: "mdi:power-plug-outline"
           - entity: scene.smartplugs_av
+            icon: "mdi:power-plug-off-outline"
           - entity: scene.tant_matbord
+            icon: "mdi:table-furniture"
           - entity: scene.slackt_matbord
+            icon: "mdi:table-furniture"
       - content: >-
           # Quarantine-o-meter
 
@@ -86,10 +93,18 @@ views:
           - entity: switch.runt_fonster
           - entity: switch.vardagsrum_uppe
         state_color: true
-      - type: glance
-        title: TV Time last 7 days
-        entities:
-          - entity: sensor.bedroom_tv_turned_on_on_last_7_days
+      - type: grid
+        columns: 3
+        cards:
+          - type: entity
+            entity: sensor.bedroom_tv_turned_on_on_last_7_days
             name: Bedroom
-          - entity: sensor.livingroom_tv_turned_on_last_7_days
+            icon: "mdi:bed-king-outline"
+          - type: entity
+            entity: sensor.livingroom_tv_turned_on_last_7_days
             name: Livingroom
+            icon: "mdi:television"
+          - type: entity
+            entity: sensor.plex_streaming_hours_last_7_days
+            name: Plex
+            icon: "mdi:plex"
