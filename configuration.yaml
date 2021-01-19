@@ -1,0 +1,42 @@
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+lovelace:
+  mode: yaml
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+recorder: !include recorder.yaml
+sensor: !include sensors.yaml
+input_boolean: !include input_booleans.yaml
+
+asuswrt:
+  host: 192.168.1.1
+  username: admin
+  password: !secret router_password
+  sensors:
+    - devices
+
+device_tracker:
+  - platform: nmap_tracker
+    hosts: 192.168.1.0/24
+    interval_seconds: 30
+    exclude:
+      - 192.168.1.1
+      - 192.168.1.136
+      - 192.168.1.100
+      - 192.168.1.243
+      - 192.168.1.101
+      - 192.168.1.147
+      - 192.168.1.244
+      - 192.168.1.22
+      - 192.168.1.84
+      - 192.168.1.210
+      - 192.168.1.172
+      - 192.168.1.81

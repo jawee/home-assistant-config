@@ -1,0 +1,90 @@
+views:
+  - panel: false
+    title: Bunkeflovägen 47
+    badges:
+      - entity: person.andreas_olsson
+      - entity: person.evelina_mattsson
+      - entity: sensor.asuswrt_devices_connected
+      - entity: sun.sun
+    cards:
+      - type: weather-forecast
+        entity: weather.bunkeflovagen_47
+      - type: entities
+        entities:
+          - entity: person.evelina_mattsson
+          - entity: person.andreas_olsson
+      - type: entities
+        entities:
+          - entity: input_boolean.home_mode
+          - entity: input_boolean.guest_mode
+          - entity: input_boolean.vacation_mode
+        state_color: true
+      - type: vertical-stack
+        cards:
+          - type: history-graph
+            entities:
+              - entity: sensor.transmission_up_speed
+              - entity: sensor.transmission_down_speed
+            hours_to_show: 24
+            refresh_interval: 0
+            title: Transmission
+      - type: entities
+        entities:
+          - entity: scene.slackt_nedanvaning
+          - entity: scene.tant_nedanvaning
+          - entity: scene.mysbelysning_nedanvaning
+          - entity: scene.smartplugs_pa
+          - entity: scene.smartplugs_av
+          - entity: scene.tant_matbord
+          - entity: scene.slackt_matbord
+      - content: >-
+          # Quarantine-o-meter
+
+          The gauge meters display the amount of time spend at home in the last
+          7 days. Where Andreas left the house (on average) {{
+          (states("sensor.quarantine_meter_andreas_times_left")|int / 7) |
+          round(1) }} times per day and Evelina {{
+          (states("sensor.quarantine_meter_evelina_times_left")|int / 7) |
+          round(1) }} times per day.
+        type: markdown
+      - type: glance
+        entities:
+          - entity: light.hall_1
+          - entity: light.hall_2
+          - entity: light.hall_3
+          - entity: light.ytterdorr_1
+          - entity: light.ytterdorr_2
+          - entity: light.ytterdorr_3
+          - entity: light.sovrum_1
+          - entity: light.koksbord
+          - entity: light.matbord_1
+          - entity: light.matbord_2
+          - entity: light.matbord_3
+          - entity: light.matbord_4
+          - entity: switch.andreas_rum
+          - entity: switch.bebisrum
+          - entity: switch.bredvid_tv
+          - entity: switch.runt_fonster
+          - entity: switch.vardagsrum_uppe
+        state_color: true
+      - type: grid
+        columns: 2
+        cards:
+          - type: gauge
+            entity: sensor.quarantine_meter_evelina
+            min: 0
+            max: 100
+            severity:
+              green: 95
+              yellow: 80
+              red: 0
+            name: Evelina
+          - type: gauge
+            entity: sensor.quarantine_meter_andreas
+            min: 0
+            max: 100
+            severity:
+              green: 95
+              yellow: 80
+              red: 0
+            name: Andreas

@@ -1,0 +1,35 @@
+- platform: history_stats
+  name: Quarantine meter Andreas
+  entity_id: person.andreas_olsson
+  state: "home"
+  type: ratio
+  duration:
+    days: 7
+  end: "{{ now() }}"
+
+- platform: history_stats
+  name: Quarantine meter Evelina
+  entity_id: person.evelina_mattsson
+  state: "home"
+  type: ratio
+  duration:
+    days: 7
+  end: "{{ now() }}"
+
+- platform: history_stats
+  name: Quarantine meter Andreas times left
+  entity_id: person.andreas_olsson
+  state: "home"
+  type: count
+  duration:
+    days: 7
+  end: "{{ now() }}"
+
+- platform: history_stats
+  name: Quarantine meter Evelina times left
+  entity_id: person.evelina_mattsson
+  state: "home"
+  type: count
+  duration:
+    days: 7
+  end: "{{ now() }}"
