@@ -109,3 +109,18 @@ views:
             entity: sensor.plex_streaming_hours_last_7_days
             name: Plex
             icon: "mdi:plex"
+      - type: grid
+        columns: 2
+        cards:
+          - type: sensor
+            entity: sensor.asuswrt_download_speed
+            name: Download Speed
+            graph: line
+            hours_to_show: 24
+            detail: 2
+          - type: sensor
+            entity: sensor.asuswrt_upload_speed
+            name: Upload Speed
+            graph: line
+            hours_to_show: 24
+            detail: 2
