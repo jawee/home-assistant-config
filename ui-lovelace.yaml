@@ -30,7 +30,7 @@ views:
             entities:
               - entity: sensor.asuswrt_download
               - entity: sensor.asuswrt_upload
-            hours_to_show: 24
+            hours_to_show: 80
             refresh_interval: 0
             #title: Data
       - type: entities
@@ -93,3 +93,19 @@ views:
           - entity: switch.runt_fonster
           - entity: switch.vardagsrum_uppe
         state_color: true
+      - type: glance
+        title: TV Time last 7 days
+        entities:
+          - entity: sensor.bedroom_tv_turned_on_on_last_7_days
+            name: Bedroom
+          - entity: sensor.livingroom_tv_turned_on_last_7_days
+            name: Livingroom
+      # - type: grid
+      #   columns: 2
+      #   cards:
+      #     - type: entity
+      #       entity: sensor.bedroom_tv_turned_on_on_last_7_days
+      #       name: Bedroom
+      #     - type: entity
+      #       entity: sensor.livingroom_tv_turned_on_last_7_days
+      #       name: Livingroom

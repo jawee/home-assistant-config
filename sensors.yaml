@@ -33,3 +33,20 @@
   duration:
     days: 7
   end: "{{ now() }}"
+
+- platform: history_stats
+  name: Livingroom TV turned on last 7 days
+  entity_id: media_player.samsung_tv
+  state: "on"
+  type: time
+  duration:
+    days: 7
+  end: "{{ now() }}"
+
+- platform: history_stats
+  name: Bedroom TV turned on on last 7 days
+  entity_id: media_player.sovrum
+  state: "playing"
+  duration:
+    days: 7
+  end: "{{ now() }}"
