@@ -1,0 +1,4 @@
+---
+default: warning
+#logs:
+#homeassistant.core: debug
