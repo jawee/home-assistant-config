@@ -22,6 +22,10 @@ asuswrt:
   password: !secret router_password
   sensors:
     - devices
+    - upload
+    - download
+    - upload_speed
+    - download_speed
 
 device_tracker:
   - platform: nmap_tracker
