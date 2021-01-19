@@ -43,7 +43,7 @@ views:
           - entity: scene.slackt_matbord
             icon: "mdi:table-furniture"
       - content: >-
-          # Quarantine-o-meter
+          ## Quarantine-o-meter
 
           The gauge meters display the amount of time spend at home in the last
           7 days. Where Andreas left the house (on average) {{
@@ -94,6 +94,7 @@ views:
           - entity: switch.vardagsrum_uppe
         state_color: true
       - type: grid
+        title: 7 Day Stats
         columns: 3
         cards:
           - type: entity
