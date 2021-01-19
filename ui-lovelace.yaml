@@ -13,10 +13,6 @@ views:
         entity: weather.bunkeflovagen_47
       - type: entities
         entities:
-          - entity: person.evelina_mattsson
-          - entity: person.andreas_olsson
-      - type: entities
-        entities:
           - entity: input_boolean.home_mode
           - entity: input_boolean.guest_mode
           - entity: input_boolean.vacation_mode
@@ -56,26 +52,6 @@ views:
           (states("sensor.quarantine_meter_evelina_times_left")|int / 7) |
           round(1) }} times per day.
         type: markdown
-      - type: glance
-        entities:
-          - entity: light.hall_1
-          - entity: light.hall_2
-          - entity: light.hall_3
-          - entity: light.ytterdorr_1
-          - entity: light.ytterdorr_2
-          - entity: light.ytterdorr_3
-          - entity: light.sovrum_1
-          - entity: light.koksbord
-          - entity: light.matbord_1
-          - entity: light.matbord_2
-          - entity: light.matbord_3
-          - entity: light.matbord_4
-          - entity: switch.andreas_rum
-          - entity: switch.bebisrum
-          - entity: switch.bredvid_tv
-          - entity: switch.runt_fonster
-          - entity: switch.vardagsrum_uppe
-        state_color: true
       - type: grid
         columns: 2
         cards:
@@ -97,3 +73,23 @@ views:
               yellow: 80
               red: 0
             name: Andreas
+      - type: glance
+        entities:
+          - entity: light.hall_1
+          - entity: light.hall_2
+          - entity: light.hall_3
+          - entity: light.ytterdorr_1
+          - entity: light.ytterdorr_2
+          - entity: light.ytterdorr_3
+          - entity: light.sovrum_1
+          - entity: light.koksbord
+          - entity: light.matbord_1
+          - entity: light.matbord_2
+          - entity: light.matbord_3
+          - entity: light.matbord_4
+          - entity: switch.andreas_rum
+          - entity: switch.bebisrum
+          - entity: switch.bredvid_tv
+          - entity: switch.runt_fonster
+          - entity: switch.vardagsrum_uppe
+        state_color: true
