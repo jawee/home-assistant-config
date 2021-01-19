@@ -100,12 +100,3 @@ views:
             name: Bedroom
           - entity: sensor.livingroom_tv_turned_on_last_7_days
             name: Livingroom
-      # - type: grid
-      #   columns: 2
-      #   cards:
-      #     - type: entity
-      #       entity: sensor.bedroom_tv_turned_on_on_last_7_days
-      #       name: Bedroom
-      #     - type: entity
-      #       entity: sensor.livingroom_tv_turned_on_last_7_days
-      #       name: Livingroom
