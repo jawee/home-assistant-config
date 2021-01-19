@@ -18,7 +18,7 @@ input_boolean: !include input_booleans.yaml
 
 asuswrt:
   host: 192.168.1.1
-  username: admin
+  username: !secret router_username
   password: !secret router_password
   sensors:
     - devices
@@ -34,6 +34,9 @@ device_tracker:
       - 192.168.1.243
       - 192.168.1.101
       - 192.168.1.147
+      - 192.168.1.148
+      - 192.168.1.149
+      - 192.168.1.179
       - 192.168.1.244
       - 192.168.1.22
       - 192.168.1.84
