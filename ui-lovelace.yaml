@@ -5,8 +5,8 @@ views:
       - entity: person.andreas_olsson
       - entity: person.evelina_mattsson
       - entity: sensor.asuswrt_devices_connected
-      - entity: sensor.asuswrt_download
-      - entity: sensor.asuswrt_upload
+      - entity: sensor.asuswrt_download_speed
+      - entity: sensor.asuswrt_upload_speed
       - entity: sun.sun
     cards:
       - type: weather-forecast
@@ -26,13 +26,6 @@ views:
             hours_to_show: 24
             refresh_interval: 0
             #title: Transmission
-          - type: history-graph
-            entities:
-              - entity: sensor.asuswrt_download
-              - entity: sensor.asuswrt_upload
-            hours_to_show: 80
-            refresh_interval: 0
-            #title: Data
       - type: entities
         entities:
           - entity: scene.slackt_nedanvaning
