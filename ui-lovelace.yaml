@@ -118,9 +118,11 @@ views:
             graph: line
             hours_to_show: 24
             detail: 1
+            icon: "mdi:download-network-outline"
           - type: sensor
             entity: sensor.transmission_up_speed
             name: Upload Speed
             graph: line
             hours_to_show: 24
             detail: 1
+            icon: "mdi:upload-network-outline"
