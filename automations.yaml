@@ -1,220 +1,252 @@
-- id: "1598456074209"
+- id: '1598456074209'
   alias: Turn the lights on at 5:00
-  description: ""
+  description: ''
   trigger:
-    - at: 05:00:00
-      platform: time
+  - at: 05:00:00
+    platform: time
   condition:
-    - condition: and
-      conditions:
-        - condition: state
-          entity_id: input_boolean.home_mode
-          state: "on"
-        - condition: time
-          weekday:
-            - mon
-            - tue
-            - wed
-            - thu
-            - fri
+  - condition: and
+    conditions:
+    - condition: state
+      entity_id: input_boolean.home_mode
+      state: 'on'
+    - condition: time
+      weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
   action:
-    - scene: scene.tant_nedanvaning
+  - scene: scene.tant_nedanvaning
   mode: single
-- id: "1598456107080"
+- id: '1598456107080'
   alias: Turn the lights off at 6:00
-  description: ""
+  description: ''
   trigger:
-    - at: 06:00:00
-      platform: time
+  - at: 06:00:00
+    platform: time
   condition:
-    - condition: and
-      conditions:
-        - condition: device
-          device_id: 2e25096ffe8111eab62dc9636acdd64b
-          domain: device_tracker
-          entity_id: device_tracker.figges_iphone
-          type: is_not_home
-        - condition: time
-          weekday:
-            - mon
-            - tue
-            - wed
-            - thu
-            - fri
+  - condition: and
+    conditions:
+    - condition: device
+      device_id: 2e25096ffe8111eab62dc9636acdd64b
+      domain: device_tracker
+      entity_id: device_tracker.figges_iphone
+      type: is_not_home
+    - condition: time
+      weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
   action:
-    - scene: scene.slackt_nedanvaning
+  - scene: scene.slackt_nedanvaning
   mode: single
-- id: "1598595594520"
+- id: '1598595594520'
   alias: Turn on - Home mode
-  description: ""
+  description: ''
   trigger:
-    - entity_id: person.andreas_olsson
-      from: not_home
-      platform: state
-      to: home
-    - entity_id: person.evelina_mattsson
-      from: not_home
-      platform: state
-      to: home
+  - entity_id: person.andreas_olsson
+    from: not_home
+    platform: state
+    to: home
+  - entity_id: person.evelina_mattsson
+    from: not_home
+    platform: state
+    to: home
   condition:
-    - condition: state
-      entity_id: input_boolean.home_mode
-      state: "off"
+  - condition: state
+    entity_id: input_boolean.home_mode
+    state: 'off'
   action:
-    - data: {}
-      entity_id: input_boolean.home_mode
-      service: input_boolean.turn_on
+  - data: {}
+    entity_id: input_boolean.home_mode
+    service: input_boolean.turn_on
   mode: single
-- id: "1598595730040"
+- id: '1598595730040'
   alias: Turn off - Home mode
-  description: ""
+  description: ''
   trigger:
-    - entity_id: person.andreas_olsson
-      from: home
-      platform: state
-      to: not_home
-    - entity_id: person.evelina_mattsson
-      from: home
-      platform: state
-      to: not_home
+  - entity_id: person.andreas_olsson
+    from: home
+    platform: state
+    to: not_home
+  - entity_id: person.evelina_mattsson
+    from: home
+    platform: state
+    to: not_home
   condition:
-    - condition: and
-      conditions:
-        - condition: state
-          entity_id: input_boolean.home_mode
-          state: "on"
-        - condition: state
-          entity_id: person.andreas_olsson
-          state: not_home
-        - condition: state
-          entity_id: person.evelina_mattsson
-          state: not_home
-  action:
-    - data: {}
+  - condition: and
+    conditions:
+    - condition: state
       entity_id: input_boolean.home_mode
-      service: input_boolean.turn_off
+      state: 'on'
+    - condition: state
+      entity_id: person.andreas_olsson
+      state: not_home
+    - condition: state
+      entity_id: person.evelina_mattsson
+      state: not_home
+  action:
+  - data: {}
+    entity_id: input_boolean.home_mode
+    service: input_boolean.turn_off
   mode: single
-- id: "1607177439120"
+- id: '1607177439120'
   alias: Turn on smart plugs when it's dark
-  description: ""
+  description: ''
   trigger:
-    - platform: sun
-      event: sunset
-      offset: -00:45:00
+  - platform: sun
+    event: sunset
+    offset: -00:45:00
   condition: []
   action:
-    - type: turn_on
-      device_id: bfc833cd4aa502425e7e4283e02c2848
-      entity_id: switch.andreas_rum
-      domain: switch
-    - type: turn_on
-      device_id: 26f3d204172712634a6a35d87df7256a
-      entity_id: switch.bebisrum
-      domain: switch
-    - type: turn_on
-      device_id: e27a2df3bbd2c7e65e45130252eef5f0
-      entity_id: switch.bredvid_tv
-      domain: switch
-    - type: turn_on
-      device_id: 7074e5aa839c5b018bbfcc9449c43866
-      entity_id: switch.runt_fonster
-      domain: switch
-    - type: turn_on
-      device_id: 71c019ca0a013851a1d1b879ef9f9d48
-      entity_id: switch.vardagsrum_uppe
-      domain: switch
+  - type: turn_on
+    device_id: bfc833cd4aa502425e7e4283e02c2848
+    entity_id: switch.andreas_rum
+    domain: switch
+  - type: turn_on
+    device_id: 26f3d204172712634a6a35d87df7256a
+    entity_id: switch.bebisrum
+    domain: switch
+  - type: turn_on
+    device_id: e27a2df3bbd2c7e65e45130252eef5f0
+    entity_id: switch.bredvid_tv
+    domain: switch
+  - type: turn_on
+    device_id: 7074e5aa839c5b018bbfcc9449c43866
+    entity_id: switch.runt_fonster
+    domain: switch
+  - type: turn_on
+    device_id: 71c019ca0a013851a1d1b879ef9f9d48
+    entity_id: switch.vardagsrum_uppe
+    domain: switch
   mode: single
-- id: "1607177580417"
+- id: '1607177580417'
   alias: Turn off smart plugs - Home mode On
-  description: ""
+  description: ''
   trigger:
-    - platform: time
-      at: "22:00:00"
+  - platform: time
+    at: '22:00:00'
   condition:
-    - condition: state
-      entity_id: input_boolean.home_mode
-      state: "on"
-    - condition: state
-      entity_id: input_boolean.guest_mode
-      state: "off"
+  - condition: state
+    entity_id: input_boolean.home_mode
+    state: 'on'
+  - condition: state
+    entity_id: input_boolean.guest_mode
+    state: 'off'
   action:
-    - type: turn_off
-      device_id: bfc833cd4aa502425e7e4283e02c2848
-      entity_id: switch.andreas_rum
-      domain: switch
-    - type: turn_off
-      device_id: 26f3d204172712634a6a35d87df7256a
-      entity_id: switch.bebisrum
-      domain: switch
-    - type: turn_off
-      device_id: 7074e5aa839c5b018bbfcc9449c43866
-      entity_id: switch.runt_fonster
-      domain: switch
-    - type: turn_off
-      device_id: e27a2df3bbd2c7e65e45130252eef5f0
-      entity_id: switch.bredvid_tv
-      domain: switch
-    - type: turn_off
-      device_id: 71c019ca0a013851a1d1b879ef9f9d48
-      entity_id: switch.vardagsrum_uppe
-      domain: switch
+  - type: turn_off
+    device_id: bfc833cd4aa502425e7e4283e02c2848
+    entity_id: switch.andreas_rum
+    domain: switch
+  - type: turn_off
+    device_id: 26f3d204172712634a6a35d87df7256a
+    entity_id: switch.bebisrum
+    domain: switch
+  - type: turn_off
+    device_id: 7074e5aa839c5b018bbfcc9449c43866
+    entity_id: switch.runt_fonster
+    domain: switch
+  - type: turn_off
+    device_id: e27a2df3bbd2c7e65e45130252eef5f0
+    entity_id: switch.bredvid_tv
+    domain: switch
+  - type: turn_off
+    device_id: 71c019ca0a013851a1d1b879ef9f9d48
+    entity_id: switch.vardagsrum_uppe
+    domain: switch
   mode: single
-- id: "1607177633176"
+- id: '1607177633176'
   alias: Turn off smart plugs - Home mode Off
-  description: ""
+  description: ''
   trigger:
-    - platform: time
-      at: 01:00:00
+  - platform: time
+    at: 01:00:00
   condition:
-    - condition: state
-      entity_id: input_boolean.guest_mode
-      state: "off"
+  - condition: state
+    entity_id: input_boolean.guest_mode
+    state: 'off'
   action:
-    - type: turn_off
-      device_id: bfc833cd4aa502425e7e4283e02c2848
-      entity_id: switch.andreas_rum
-      domain: switch
-    - type: turn_off
-      device_id: 26f3d204172712634a6a35d87df7256a
-      entity_id: switch.bebisrum
-      domain: switch
-    - type: turn_off
-      device_id: e27a2df3bbd2c7e65e45130252eef5f0
-      entity_id: switch.bredvid_tv
-      domain: switch
-    - type: turn_off
-      device_id: 7074e5aa839c5b018bbfcc9449c43866
-      entity_id: switch.runt_fonster
-      domain: switch
-    - type: turn_off
-      device_id: 71c019ca0a013851a1d1b879ef9f9d48
-      entity_id: switch.vardagsrum_uppe
-      domain: switch
+  - type: turn_off
+    device_id: bfc833cd4aa502425e7e4283e02c2848
+    entity_id: switch.andreas_rum
+    domain: switch
+  - type: turn_off
+    device_id: 26f3d204172712634a6a35d87df7256a
+    entity_id: switch.bebisrum
+    domain: switch
+  - type: turn_off
+    device_id: e27a2df3bbd2c7e65e45130252eef5f0
+    entity_id: switch.bredvid_tv
+    domain: switch
+  - type: turn_off
+    device_id: 7074e5aa839c5b018bbfcc9449c43866
+    entity_id: switch.runt_fonster
+    domain: switch
+  - type: turn_off
+    device_id: 71c019ca0a013851a1d1b879ef9f9d48
+    entity_id: switch.vardagsrum_uppe
+    domain: switch
   mode: single
-- id: "1608283751073"
-  alias: "Smartplugs off "
-  description: ""
+- id: '1608283751073'
+  alias: 'Smartplugs off '
+  description: ''
   trigger:
-    - platform: sun
-      event: sunrise
-      offset: "+3:00:00"
+  - platform: sun
+    event: sunrise
+    offset: '+3:00:00'
   condition: []
   action:
-    - scene: scene.smartplugs_av
+  - scene: scene.smartplugs_av
   mode: single
-- id: "1611125861930"
+- id: '1611125861930'
   alias: Send notification on Synology update available
-  description: ""
+  description: ''
   trigger:
-    - type: turned_on
-      platform: device
-      device_id: b4dcc192f78b7ee5dc6d0cfbb9ac50a7
-      entity_id: binary_sensor.ds415_update_available
-      domain: binary_sensor
+  - type: turned_on
+    platform: device
+    device_id: b4dcc192f78b7ee5dc6d0cfbb9ac50a7
+    entity_id: binary_sensor.ds415_update_available
+    domain: binary_sensor
   condition: []
   action:
-    - service: notify.mobile_app_figges_iphone
-      data:
-        title: "Synology"
-        message: "Update available"
+  - service: notify.mobile_app_figges_iphone
+    data:
+      title: Synology
+      message: Update available
+  mode: single
+- id: '1611137295375'
+  alias: Water detected upstairs
+  description: ''
+  trigger:
+  - type: moist
+    platform: device
+    device_id: e1c187eaa5d847216eff7ce235cf4926
+    entity_id: binary_sensor.upstairs_water
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: notify.notify
+    data:
+      title: Water detected upstairs
+      message: Possible leak
+  mode: single
+- id: '1611144694074'
+  alias: Water detected downstairs
+  description: ''
+  trigger:
+  - type: moist
+    platform: device
+    device_id: 98f19f6c4da6deb6f18943823482cd6f
+    entity_id: binary_sensor.downstairs_water
+    domain: binary_sensor
+  condition: []
+  action:
+  - service: notify.notify
+    data:
+      title: Water detected downstairs
+      message: Possible leak
   mode: single
