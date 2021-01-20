@@ -126,3 +126,12 @@ views:
             hours_to_show: 24
             detail: 1
             icon: "mdi:upload-network-outline"
+      - type: gauge
+        entity: sensor.ds415_volume_1_volume_used
+        min: 0
+        max: 100
+        severity:
+          green: 95
+          yellow: 80
+          red: 0
+        name: Used capacity (DS415)
