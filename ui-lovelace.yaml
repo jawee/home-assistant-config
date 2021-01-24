@@ -1,3 +1,4 @@
+title: Bunkeflovägen
 views:
   - panel: false
     title: Bunkeflovägen 47
@@ -98,28 +99,28 @@ views:
         columns: 2
         cards:
           - type: sensor
-            entity: sensor.livingroom_temperature
+            entity: sensor.temperature_25
             graph: line
             hours_to_show: 12
-            detail: 1
+            detail: 2
             icon: "mdi:thermometer"
           - type: sensor
             entity: sensor.bedroom_temperature
             graph: line
             hours_to_show: 12
-            detail: 1
+            detail: 2
             icon: "mdi:thermometer"
           - type: sensor
             entity: sensor.andreas_temperature
             graph: line
             hours_to_show: 12
-            detail: 1
+            detail: 2
             icon: "mdi:thermometer"
           - type: sensor
-            entity: sensor.patio_temperature
+            entity: sensor.patio_temperature_2
             graph: line
             hours_to_show: 12
-            detail: 1
+            detail: 2
             icon: "mdi:thermometer"
       - type: grid
         title: 7 Day Stats
@@ -137,29 +138,29 @@ views:
             entity: sensor.plex_streaming_hours_last_7_days
             name: Plex
             icon: "mdi:plex"
-      - type: grid
-        columns: 2
-        cards:
-          - type: sensor
-            entity: sensor.transmission_down_speed
-            name: Download Speed
-            graph: line
-            hours_to_show: 24
-            detail: 1
-            icon: "mdi:download-network-outline"
-          - type: sensor
-            entity: sensor.transmission_up_speed
-            name: Upload Speed
-            graph: line
-            hours_to_show: 24
-            detail: 1
-            icon: "mdi:upload-network-outline"
-          - type: gauge
-            entity: sensor.ds415_volume_1_volume_used
-            min: 0
-            max: 100
-            severity:
-              green: 95
-              yellow: 80
-              red: 0
-            name: Used capacity (DS415)
+      # - type: grid
+      #   columns: 2
+      #   cards:
+      #     - type: sensor
+      #       entity: sensor.transmission_down_speed
+      #       name: Download Speed
+      #       graph: line
+      #       hours_to_show: 24
+      #       detail: 1
+      #       icon: "mdi:download-network-outline"
+      #     - type: sensor
+      #       entity: sensor.transmission_up_speed
+      #       name: Upload Speed
+      #       graph: line
+      #       hours_to_show: 24
+      #       detail: 1
+      #       icon: "mdi:upload-network-outline"
+      #     - type: gauge
+      #       entity: sensor.ds415_volume_1_volume_used
+      #       min: 0
+      #       max: 100
+      #       severity:
+      #         green: 95
+      #         yellow: 80
+      #         red: 0
+      #       name: Used capacity (DS415)
