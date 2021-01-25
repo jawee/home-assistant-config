@@ -1,4 +1,4 @@
-- id: "1598455945973"
+- id: '1598455945973'
   name: Tänt nedanvåning
   entities:
     light.hall_1:
@@ -8,7 +8,7 @@
       color_temp: 370
       friendly_name: hall 1
       supported_features: 35
-      state: "on"
+      state: 'on'
     light.hall_2:
       min_mireds: 250
       max_mireds: 454
@@ -16,7 +16,7 @@
       color_temp: 370
       friendly_name: hall 2
       supported_features: 35
-      state: "on"
+      state: 'on'
     light.hall_3:
       min_mireds: 250
       max_mireds: 454
@@ -24,7 +24,7 @@
       color_temp: 370
       friendly_name: hall 3
       supported_features: 35
-      state: "on"
+      state: 'on'
     light.koksbord:
       min_mireds: 250
       max_mireds: 454
@@ -32,7 +32,7 @@
       color_temp: 370
       friendly_name: köksbord
       supported_features: 35
-      state: "on"
+      state: 'on'
     light.ytterdorr_1:
       min_mireds: 250
       max_mireds: 454
@@ -40,7 +40,7 @@
       color_temp: 370
       friendly_name: ytterdörr 1
       supported_features: 35
-      state: "on"
+      state: 'on'
     light.ytterdorr_2:
       min_mireds: 250
       max_mireds: 454
@@ -48,7 +48,7 @@
       color_temp: 370
       friendly_name: ytterdörr 2
       supported_features: 35
-      state: "on"
+      state: 'on'
     light.ytterdorr_3:
       min_mireds: 250
       max_mireds: 454
@@ -56,28 +56,28 @@
       color_temp: 370
       friendly_name: ytterdörr 3
       supported_features: 35
-      state: "on"
+      state: 'on'
     light.matbord_1:
       brightness: 153
       friendly_name: Matbord 1
       supported_features: 33
-      state: "on"
+      state: 'on'
     light.matbord_2:
       brightness: 153
       friendly_name: Matbord 2
       supported_features: 33
-      state: "on"
+      state: 'on'
     light.matbord_3:
       brightness: 153
       friendly_name: Matbord 3
       supported_features: 33
-      state: "on"
+      state: 'on'
     light.matbord_4:
       brightness: 153
       friendly_name: Matbord 4
       supported_features: 33
-      state: "on"
-- id: "1598455990676"
+      state: 'on'
+- id: '1598455990676'
   name: Släckt nedanvåning
   entities:
     light.hall_1:
@@ -85,60 +85,60 @@
       max_mireds: 454
       friendly_name: hall 1
       supported_features: 35
-      state: "off"
+      state: 'off'
     light.hall_2:
       min_mireds: 250
       max_mireds: 454
       friendly_name: hall 2
       supported_features: 35
-      state: "off"
+      state: 'off'
     light.hall_3:
       min_mireds: 250
       max_mireds: 454
       friendly_name: hall 3
       supported_features: 35
-      state: "off"
+      state: 'off'
     light.koksbord:
       min_mireds: 250
       max_mireds: 454
       friendly_name: köksbord
       supported_features: 35
-      state: "off"
+      state: 'off'
     light.ytterdorr_1:
       min_mireds: 250
       max_mireds: 454
       friendly_name: ytterdörr 1
       supported_features: 35
-      state: "off"
+      state: 'off'
     light.ytterdorr_2:
       min_mireds: 250
       max_mireds: 454
       friendly_name: ytterdörr 2
       supported_features: 35
-      state: "off"
+      state: 'off'
     light.ytterdorr_3:
       min_mireds: 250
       max_mireds: 454
       friendly_name: ytterdörr 3
       supported_features: 35
-      state: "off"
+      state: 'off'
     light.matbord_1:
       friendly_name: Matbord 1
       supported_features: 33
-      state: "off"
+      state: 'off'
     light.matbord_2:
       friendly_name: Matbord 2
       supported_features: 33
-      state: "off"
+      state: 'off'
     light.matbord_3:
       friendly_name: Matbord 3
       supported_features: 33
-      state: "off"
+      state: 'off'
     light.matbord_4:
       friendly_name: Matbord 4
       supported_features: 33
-      state: "off"
-- id: "1598455945979"
+      state: 'off'
+- id: '1598455945979'
   name: Mysbelysning nedanvåning
   entities:
     light.hall_1:
@@ -148,7 +148,7 @@
       color_temp: 454
       friendly_name: hall 1
       supported_features: 35
-      state: "on"
+      state: 'on'
     light.hall_2:
       min_mireds: 250
       max_mireds: 454
@@ -156,7 +156,7 @@
       color_temp: 454
       friendly_name: hall 2
       supported_features: 35
-      state: "on"
+      state: 'on'
     light.hall_3:
       min_mireds: 250
       max_mireds: 454
@@ -164,7 +164,7 @@
       color_temp: 454
       friendly_name: hall 3
       supported_features: 35
-      state: "on"
+      state: 'on'
     light.koksbord:
       min_mireds: 250
       max_mireds: 454
@@ -172,7 +172,7 @@
       color_temp: 454
       friendly_name: köksbord
       supported_features: 35
-      state: "on"
+      state: 'on'
     light.ytterdorr_1:
       min_mireds: 250
       max_mireds: 454
@@ -180,7 +180,7 @@
       color_temp: 454
       friendly_name: ytterdörr 1
       supported_features: 35
-      state: "on"
+      state: 'on'
     light.ytterdorr_2:
       min_mireds: 250
       max_mireds: 454
@@ -188,7 +188,7 @@
       color_temp: 454
       friendly_name: ytterdörr 2
       supported_features: 35
-      state: "on"
+      state: 'on'
     light.ytterdorr_3:
       min_mireds: 250
       max_mireds: 454
@@ -196,82 +196,82 @@
       color_temp: 454
       friendly_name: ytterdörr 3
       supported_features: 35
-      state: "on"
-- id: "1607178306256"
+      state: 'on'
+- id: '1607178306256'
   name: Smartplugs På
   entities:
     switch.andreas_rum:
       friendly_name: Andreas rum
-      state: "on"
+      state: 'on'
     switch.bebisrum:
-      friendly_name: "Bebisrum "
-      state: "on"
-    switch.vardagsrum_uppe:
-      friendly_name: Vardagsrum uppe
-      state: "on"
+      friendly_name: 'Bebisrum '
+      state: 'on'
     switch.runt_fonster:
       friendly_name: Runt fönster
-      state: "on"
+      state: 'on'
     switch.bredvid_tv:
       friendly_name: Bredvid tv
-      state: "on"
-- id: "1607178339103"
+      state: 'on'
+    switch.smart_plug_upstairs_livingroom:
+      friendly_name: Vardagsrum Uppe
+      state: 'on'
+- id: '1607178339103'
   name: Smartplugs Av
   entities:
     switch.andreas_rum:
       friendly_name: Andreas rum
-      state: "off"
+      state: 'off'
     switch.bebisrum:
-      friendly_name: "Bebisrum "
-      state: "off"
-    switch.vardagsrum_uppe:
-      friendly_name: Vardagsrum uppe
-      state: "off"
+      friendly_name: 'Bebisrum '
+      state: 'off'
     switch.bredvid_tv:
       friendly_name: Bredvid tv
-      state: "off"
+      state: 'off'
     switch.runt_fonster:
       friendly_name: Runt fönster
-      state: "off"
-- id: "1607802995256"
+      state: 'off'
+    switch.smart_plug_upstairs_livingroom:
+      friendly_name: Vardagsrum Uppe
+      state: 'off'
+- id: '1607802995256'
   name: Tänt matbord
   entities:
     light.matbord_1:
       brightness: 102
       friendly_name: Matbord 1
       supported_features: 33
-      state: "on"
+      state: 'on'
     light.matbord_2:
       brightness: 102
       friendly_name: Matbord 2
       supported_features: 33
-      state: "on"
+      state: 'on'
     light.matbord_3:
       brightness: 102
       friendly_name: Matbord 3
       supported_features: 33
-      state: "on"
+      state: 'on'
     light.matbord_4:
       brightness: 102
       friendly_name: Matbord 4
       supported_features: 33
-      state: "on"
-- id: "1607803078855"
+      state: 'on'
+- id: '1607803078855'
   name: Släckt matbord
   entities:
     light.matbord_1:
       friendly_name: Matbord 1
       supported_features: 33
-      state: "off"
+      state: 'off'
     light.matbord_4:
       friendly_name: Matbord 4
       supported_features: 33
-      state: "off"
+      state: 'off'
     light.matbord_3:
       friendly_name: Matbord 3
       supported_features: 33
-      state: "off"
+      state: 'off'
     light.matbord_2:
       friendly_name: Matbord 2
       supported_features: 33
-      state: "off"
+      state: 'off'
