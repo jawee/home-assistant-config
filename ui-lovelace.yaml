@@ -93,7 +93,7 @@ views:
           - entity: switch.bebisrum
           - entity: switch.bredvid_tv
           - entity: switch.runt_fonster
-          - entity: switch.vardagsrum_uppe
+          - entity: switch.smart_plug_upstairs_livingroom
         state_color: true
       - type: grid
         title: Temperatures
@@ -103,25 +103,25 @@ views:
             entity: sensor.temperature_25
             graph: line
             hours_to_show: 12
-            detail: 2
+            detail: 1
             icon: "mdi:thermometer"
           - type: sensor
             entity: sensor.bedroom_temperature
             graph: line
             hours_to_show: 12
-            detail: 2
+            detail: 1
             icon: "mdi:thermometer"
           - type: sensor
             entity: sensor.andreas_temperature
             graph: line
             hours_to_show: 12
-            detail: 2
+            detail: 1
             icon: "mdi:thermometer"
           - type: sensor
             entity: sensor.patio_temperature_2
             graph: line
             hours_to_show: 12
-            detail: 2
+            detail: 1
             icon: "mdi:thermometer"
       - type: grid
         title: 7 Day Stats
