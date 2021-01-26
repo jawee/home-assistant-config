@@ -18,15 +18,6 @@ views:
           - entity: input_boolean.guest_mode
           - entity: input_boolean.vacation_mode
         state_color: true
-      # - type: vertical-stack
-      #   cards:
-      #     - type: history-graph
-      #       entities:
-      #         - entity: sensor.transmission_up_speed
-      #         - entity: sensor.transmission_down_speed
-      #       hours_to_show: 24
-      #       refresh_interval: 0
-      #       #title: Transmission
       - type: entities
         entities:
           - entity: scene.slackt_nedanvaning
@@ -102,25 +93,25 @@ views:
           - type: sensor
             entity: sensor.temperature_25
             graph: line
-            hours_to_show: 12
+            hours_to_show: 24
             detail: 1
             icon: "mdi:thermometer"
           - type: sensor
             entity: sensor.bedroom_temperature
             graph: line
-            hours_to_show: 12
+            hours_to_show: 24
             detail: 1
             icon: "mdi:thermometer"
           - type: sensor
             entity: sensor.andreas_temperature
             graph: line
-            hours_to_show: 12
+            hours_to_show: 24
             detail: 1
             icon: "mdi:thermometer"
           - type: sensor
             entity: sensor.patio_temperature_2
             graph: line
-            hours_to_show: 12
+            hours_to_show: 24
             detail: 1
             icon: "mdi:thermometer"
       - type: grid
@@ -139,32 +130,32 @@ views:
             entity: sensor.plex_streaming_hours_last_7_days
             name: Plex
             icon: "mdi:plex"
-      # - type: grid
-      #   columns: 2
-      #   cards:
-      #     - type: sensor
-      #       entity: sensor.transmission_down_speed
-      #       name: Download Speed
-      #       graph: line
-      #       hours_to_show: 24
-      #       detail: 1
-      #       icon: "mdi:download-network-outline"
-      #     - type: sensor
-      #       entity: sensor.transmission_up_speed
-      #       name: Upload Speed
-      #       graph: line
-      #       hours_to_show: 24
-      #       detail: 1
-      #       icon: "mdi:upload-network-outline"
-      #     - type: gauge
-      #       entity: sensor.ds415_volume_1_volume_used
-      #       min: 0
-      #       max: 100
-      #       severity:
-      #         green: 95
-      #         yellow: 80
-      #         red: 0
-      #       name: Used capacity (DS415)
+      - type: grid
+        columns: 2
+        cards:
+          - type: sensor
+            entity: sensor.transmission_down_speed
+            name: Download Speed
+            graph: line
+            hours_to_show: 24
+            detail: 1
+            icon: "mdi:download-network-outline"
+          - type: sensor
+            entity: sensor.transmission_up_speed
+            name: Upload Speed
+            graph: line
+            hours_to_show: 24
+            detail: 1
+            icon: "mdi:upload-network-outline"
+          - type: gauge
+            entity: sensor.ds415_volume_1_volume_used
+            min: 0
+            max: 100
+            severity:
+              green: 95
+              yellow: 80
+              red: 0
+            name: Used capacity (DS415)
       - type: entities
         title: Details
         entities:
