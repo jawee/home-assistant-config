@@ -29,11 +29,9 @@
   condition:
   - condition: and
     conditions:
-    - condition: device
-      device_id: 2e25096ffe8111eab62dc9636acdd64b
-      domain: device_tracker
-      entity_id: device_tracker.figges_iphone
-      type: is_not_home
+    - condition: state
+      entity_id: person.andreas_olsson
+      state: '"away"'
     - condition: time
       weekday:
       - mon
@@ -103,26 +101,7 @@
     offset: -00:45:00
   condition: []
   action:
-  - type: turn_on
-    device_id: bfc833cd4aa502425e7e4283e02c2848
-    entity_id: switch.andreas_rum
-    domain: switch
-  - type: turn_on
-    device_id: 26f3d204172712634a6a35d87df7256a
-    entity_id: switch.bebisrum
-    domain: switch
-  - type: turn_on
-    device_id: e27a2df3bbd2c7e65e45130252eef5f0
-    entity_id: switch.bredvid_tv
-    domain: switch
-  - type: turn_on
-    device_id: 7074e5aa839c5b018bbfcc9449c43866
-    entity_id: switch.runt_fonster
-    domain: switch
-  - type: turn_on
-    device_id: 71c019ca0a013851a1d1b879ef9f9d48
-    entity_id: switch.vardagsrum_uppe
-    domain: switch
+  - scene: scene.smartplugs_pa
   mode: single
 - id: '1607177580417'
   alias: Turn off smart plugs - Home mode On
@@ -138,26 +117,7 @@
     entity_id: input_boolean.guest_mode
     state: 'off'
   action:
-  - type: turn_off
-    device_id: bfc833cd4aa502425e7e4283e02c2848
-    entity_id: switch.andreas_rum
-    domain: switch
-  - type: turn_off
-    device_id: 26f3d204172712634a6a35d87df7256a
-    entity_id: switch.bebisrum
-    domain: switch
-  - type: turn_off
-    device_id: 7074e5aa839c5b018bbfcc9449c43866
-    entity_id: switch.runt_fonster
-    domain: switch
-  - type: turn_off
-    device_id: e27a2df3bbd2c7e65e45130252eef5f0
-    entity_id: switch.bredvid_tv
-    domain: switch
-  - type: turn_off
-    device_id: 71c019ca0a013851a1d1b879ef9f9d48
-    entity_id: switch.vardagsrum_uppe
-    domain: switch
+  - scene: scene.smartplugs_av
   mode: single
 - id: '1607177633176'
   alias: Turn off smart plugs - Home mode Off
@@ -169,36 +129,6 @@
   - condition: state
     entity_id: input_boolean.guest_mode
     state: 'off'
-  action:
-  - type: turn_off
-    device_id: bfc833cd4aa502425e7e4283e02c2848
-    entity_id: switch.andreas_rum
-    domain: switch
-  - type: turn_off
-    device_id: 26f3d204172712634a6a35d87df7256a
-    entity_id: switch.bebisrum
-    domain: switch
-  - type: turn_off
-    device_id: e27a2df3bbd2c7e65e45130252eef5f0
-    entity_id: switch.bredvid_tv
-    domain: switch
-  - type: turn_off
-    device_id: 7074e5aa839c5b018bbfcc9449c43866
-    entity_id: switch.runt_fonster
-    domain: switch
-  - type: turn_off
-    device_id: 71c019ca0a013851a1d1b879ef9f9d48
-    entity_id: switch.vardagsrum_uppe
-    domain: switch
-  mode: single
-- id: '1608283751073'
-  alias: 'Smartplugs off '
-  description: ''
-  trigger:
-  - platform: sun
-    event: sunrise
-    offset: '+3:00:00'
-  condition: []
   action:
   - scene: scene.smartplugs_av
   mode: single

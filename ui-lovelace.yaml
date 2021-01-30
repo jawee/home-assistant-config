@@ -138,14 +138,14 @@ views:
             name: Download Speed
             graph: line
             hours_to_show: 24
-            detail: 1
+            detail: 2
             icon: "mdi:download-network-outline"
           - type: sensor
             entity: sensor.transmission_up_speed
             name: Upload Speed
             graph: line
             hours_to_show: 24
-            detail: 1
+            detail: 2
             icon: "mdi:upload-network-outline"
           - type: gauge
             entity: sensor.ds415_volume_1_volume_used
