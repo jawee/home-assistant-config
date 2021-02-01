@@ -38,10 +38,10 @@ views:
           ## Quarantine-o-meter
 
           The gauge meters display the amount of time spend at home in the last
-          7 days. Where Andreas left the house (on average) {{
-          (states("sensor.quarantine_meter_andreas_times_left")|int / 7) |
+          14 days. Where Andreas left the house (on average) {{
+          (states("sensor.quarantine_meter_andreas_times_left")|int / 14) |
           round(1) }} times per day and Evelina {{
-          (states("sensor.quarantine_meter_evelina_times_left")|int / 7) |
+          (states("sensor.quarantine_meter_evelina_times_left")|int / 14) |
           round(1) }} times per day.
         type: markdown
       - type: grid
