@@ -17,6 +17,7 @@ sensor: !include sensors.yaml
 input_boolean: !include input_booleans.yaml
 logger: !include includes/logger.yaml
 discovery: !include includes/discovery.yaml
+zone: !include includes/zones.yaml
 
 asuswrt:
   host: 192.168.1.1
