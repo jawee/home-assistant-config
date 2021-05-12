@@ -19,16 +19,16 @@ logger: !include includes/logger.yaml
 discovery: !include includes/discovery.yaml
 zone: !include includes/zones.yaml
 
-asuswrt:
-  host: 192.168.1.1
-  username: !secret router_username
-  password: !secret router_password
-  sensors:
-    - devices
-    - upload
-    - download
-    - upload_speed
-    - download_speed
+# asuswrt:
+#   host: 192.168.1.1
+#   username: !secret router_username
+#   password: !secret router_password
+#   sensors:
+#     - devices
+#     - upload
+#     - download
+#     - upload_speed
+#     - download_speed
 
 device_tracker:
   - platform: nmap_tracker
