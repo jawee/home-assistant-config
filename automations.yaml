@@ -196,3 +196,31 @@
           Home Assistant {{ state_attr('binary_sensor.updater', 'newest_version')
           }} is available.
   mode: single
+- id: "1621143784012"
+  alias: Turn on bebisrum - Home mode On
+  description: ""
+  trigger:
+    - platform: sun
+      event: sunset
+      offset: -00:45:00
+  condition:
+    - condition: state
+      entity_id: input_boolean.home_mode
+      state: "true"
+  action:
+    - scene: scene.babyrum_tant
+  mode: single
+- id: "1621143842718"
+  alias: Turn off bebisrum - Home mode on
+  description: ""
+  trigger:
+    - platform: sun
+      event: sunrise
+      offset: 00:45:00
+  condition:
+    - condition: state
+      entity_id: input_boolean.home_mode
+      state: "true"
+  action:
+    - scene: scene.babyrum_slackt
+  mode: single

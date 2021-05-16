@@ -34,6 +34,14 @@ views:
             icon: "mdi:table-furniture"
           - entity: scene.slackt_matbord
             icon: "mdi:table-furniture"
+          - entity: scene.babyrum_tant
+            icon: "mdi:baby"
+          - entity: scene.babyrum_slackt
+            icon: "mdi:baby"
+          - entity: scene.tant_sovrum
+            icon: "mdi:bed"
+          - entity: scene.slackt_sovrum
+            icon: "mdi:bed"
       - content: >-
           ## Quarantine-o-meter
 

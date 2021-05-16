@@ -4,6 +4,9 @@
     light.hall_1:
       min_mireds: 250
       max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
       brightness: 153
       color_temp: 370
       friendly_name: hall 1
@@ -12,6 +15,9 @@
     light.hall_2:
       min_mireds: 250
       max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
       brightness: 153
       color_temp: 370
       friendly_name: hall 2
@@ -20,6 +26,9 @@
     light.hall_3:
       min_mireds: 250
       max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
       brightness: 153
       color_temp: 370
       friendly_name: hall 3
@@ -28,6 +37,9 @@
     light.koksbord:
       min_mireds: 250
       max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
       brightness: 153
       color_temp: 370
       friendly_name: köksbord
@@ -36,6 +48,9 @@
     light.ytterdorr_1:
       min_mireds: 250
       max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
       brightness: 153
       color_temp: 370
       friendly_name: ytterdörr 1
@@ -44,6 +59,9 @@
     light.ytterdorr_2:
       min_mireds: 250
       max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
       brightness: 153
       color_temp: 370
       friendly_name: ytterdörr 2
@@ -52,98 +70,140 @@
     light.ytterdorr_3:
       min_mireds: 250
       max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
       brightness: 153
       color_temp: 370
       friendly_name: ytterdörr 3
       supported_features: 35
       state: 'on'
     light.matbord_1:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
       brightness: 153
       friendly_name: Matbord 1
       supported_features: 33
       state: 'on'
     light.matbord_2:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
       brightness: 153
       friendly_name: Matbord 2
       supported_features: 33
       state: 'on'
     light.matbord_3:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
       brightness: 153
       friendly_name: Matbord 3
       supported_features: 33
       state: 'on'
     light.matbord_4:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
       brightness: 153
       friendly_name: Matbord 4
       supported_features: 33
       state: 'on'
+  icon: mdi:account-supervisor
 - id: '1598455990676'
   name: Släckt nedanvåning
   entities:
     light.hall_1:
       min_mireds: 250
       max_mireds: 454
+      supported_color_modes:
+      - color_temp
       friendly_name: hall 1
       supported_features: 35
       state: 'off'
     light.hall_2:
       min_mireds: 250
       max_mireds: 454
+      supported_color_modes:
+      - color_temp
       friendly_name: hall 2
       supported_features: 35
       state: 'off'
     light.hall_3:
       min_mireds: 250
       max_mireds: 454
+      supported_color_modes:
+      - color_temp
       friendly_name: hall 3
       supported_features: 35
       state: 'off'
     light.koksbord:
       min_mireds: 250
       max_mireds: 454
+      supported_color_modes:
+      - color_temp
       friendly_name: köksbord
       supported_features: 35
       state: 'off'
     light.ytterdorr_1:
       min_mireds: 250
       max_mireds: 454
+      supported_color_modes:
+      - color_temp
       friendly_name: ytterdörr 1
       supported_features: 35
       state: 'off'
     light.ytterdorr_2:
       min_mireds: 250
       max_mireds: 454
+      supported_color_modes:
+      - color_temp
       friendly_name: ytterdörr 2
       supported_features: 35
       state: 'off'
     light.ytterdorr_3:
       min_mireds: 250
       max_mireds: 454
+      supported_color_modes:
+      - color_temp
       friendly_name: ytterdörr 3
       supported_features: 35
       state: 'off'
     light.matbord_1:
+      supported_color_modes:
+      - brightness
       friendly_name: Matbord 1
       supported_features: 33
       state: 'off'
     light.matbord_2:
+      supported_color_modes:
+      - brightness
       friendly_name: Matbord 2
       supported_features: 33
       state: 'off'
     light.matbord_3:
+      supported_color_modes:
+      - brightness
       friendly_name: Matbord 3
       supported_features: 33
       state: 'off'
     light.matbord_4:
+      supported_color_modes:
+      - brightness
       friendly_name: Matbord 4
       supported_features: 33
       state: 'off'
+  icon: mdi:account-supervisor
 - id: '1598455945979'
   name: Mysbelysning nedanvåning
   entities:
     light.hall_1:
       min_mireds: 250
       max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
       brightness: 64
       color_temp: 454
       friendly_name: hall 1
@@ -152,6 +212,9 @@
     light.hall_2:
       min_mireds: 250
       max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
       brightness: 64
       color_temp: 454
       friendly_name: hall 2
@@ -160,6 +223,9 @@
     light.hall_3:
       min_mireds: 250
       max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
       brightness: 64
       color_temp: 454
       friendly_name: hall 3
@@ -168,6 +234,9 @@
     light.koksbord:
       min_mireds: 250
       max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
       brightness: 64
       color_temp: 454
       friendly_name: köksbord
@@ -176,6 +245,9 @@
     light.ytterdorr_1:
       min_mireds: 250
       max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
       brightness: 64
       color_temp: 454
       friendly_name: ytterdörr 1
@@ -184,6 +256,9 @@
     light.ytterdorr_2:
       min_mireds: 250
       max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
       brightness: 66
       color_temp: 454
       friendly_name: ytterdörr 2
@@ -192,11 +267,15 @@
     light.ytterdorr_3:
       min_mireds: 250
       max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
       brightness: 64
       color_temp: 454
       friendly_name: ytterdörr 3
       supported_features: 35
       state: 'on'
+  icon: mdi:fireplace
 - id: '1607178306256'
   name: Smartplugs På
   entities:
@@ -215,6 +294,7 @@
     switch.smart_plug_upstairs_livingroom:
       friendly_name: Vardagsrum Uppe
       state: 'on'
+  icon: mdi:power-socket-eu
 - id: '1607178339103'
   name: Smartplugs Av
   entities:
@@ -233,45 +313,109 @@
     switch.smart_plug_upstairs_livingroom:
       friendly_name: Vardagsrum Uppe
       state: 'off'
+  icon: mdi:power-socket-eu
 - id: '1607802995256'
   name: Tänt matbord
   entities:
     light.matbord_1:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
       brightness: 102
       friendly_name: Matbord 1
       supported_features: 33
       state: 'on'
     light.matbord_2:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
       brightness: 102
       friendly_name: Matbord 2
       supported_features: 33
       state: 'on'
     light.matbord_3:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
       brightness: 102
       friendly_name: Matbord 3
       supported_features: 33
       state: 'on'
     light.matbord_4:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
       brightness: 102
       friendly_name: Matbord 4
       supported_features: 33
       state: 'on'
+  icon: mdi:food-turkey
 - id: '1607803078855'
   name: Släckt matbord
   entities:
     light.matbord_1:
+      supported_color_modes:
+      - brightness
       friendly_name: Matbord 1
       supported_features: 33
       state: 'off'
     light.matbord_4:
+      supported_color_modes:
+      - brightness
       friendly_name: Matbord 4
       supported_features: 33
       state: 'off'
     light.matbord_3:
+      supported_color_modes:
+      - brightness
       friendly_name: Matbord 3
       supported_features: 33
       state: 'off'
     light.matbord_2:
+      supported_color_modes:
+      - brightness
       friendly_name: Matbord 2
       supported_features: 33
       state: 'off'
+  icon: mdi:food-turkey
+- id: '1621143423660'
+  name: Tänt sovrum
+  entities:
+    light.sovrum_1:
+      min_mireds: 250
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      color_mode: color_temp
+      brightness: 1
+      color_temp: 454
+      friendly_name: sovrum 1
+      supported_features: 35
+      state: 'on'
+  icon: mdi:bed
+- id: '1621143445832'
+  name: Släckt sovrum
+  entities:
+    light.sovrum_1:
+      min_mireds: 250
+      max_mireds: 454
+      supported_color_modes:
+      - color_temp
+      friendly_name: sovrum 1
+      supported_features: 35
+      state: 'off'
+  icon: mdi:bed
+- id: '1621143481577'
+  name: Babyrum tänt
+  entities:
+    switch.bebisrum:
+      friendly_name: 'Bebisrum '
+      state: 'on'
+  icon: mdi:baby
+- id: '1621143563431'
+  name: Babyrum släckt
+  entities:
+    switch.bebisrum:
+      friendly_name: 'Bebisrum '
+      state: 'off'
+  icon: mdi:baby
