@@ -1,0 +1,38 @@
+title: Details
+views:
+  - panel: false
+    title: Details
+    cards:
+      - type: entities
+        title: Sensor Details
+        entities:
+          - entity: sensor.humidity_26
+            name: Livingroom Humidity
+          - entity: sensor.pressure_27
+            name: Livingroom Pressure
+          - entity: sensor.temperature_25_battery_level
+            name: Livingroom Battery
+          - entity: sensor.patio_humidity_2
+            name: Patio Humidity
+          - entity: sensor.patio_pressure_2
+            name: Patio Pressure
+          - entity: sensor.patio_sensor_battery_level
+            name: Patio Battery
+          - entity: sensor.andreas_humidity
+            name: Andreas room Humidity
+          - entity: sensor.andreas_pressure
+            name: Andreas room Pressure
+          - entity: sensor.andreas_sensor_battery_level
+            name: Andreas room Battery
+          - entity: sensor.bedroom_humidity
+            name: Bedroom Humidity
+          - entity: sensor.bedroom_pressure
+            name: Bedroom Pressure
+          - entity: sensor.bedroom_sensor_battery_level
+            name: Bedroom Battery
+          - entity: binary_sensor.downstairs_water
+          - entity: sensor.downstairs_water_battery_level
+            name: Downstairs Watersensor Battery
+          - entity: binary_sensor.upstairs_water
+          - entity: sensor.upstairs_water_battery_level
+            name: Upstairs Watersensor Battery
