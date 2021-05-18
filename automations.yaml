@@ -206,7 +206,7 @@
   condition:
     - condition: state
       entity_id: input_boolean.home_mode
-      state: "true"
+      state: "on"
   action:
     - scene: scene.babyrum_tant
   mode: single
@@ -220,7 +220,7 @@
   condition:
     - condition: state
       entity_id: input_boolean.home_mode
-      state: "true"
+      state: "on"
   action:
     - scene: scene.babyrum_slackt
   mode: single
