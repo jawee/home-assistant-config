@@ -7,14 +7,6 @@ tts:
 
 lovelace:
   mode: yaml
-  # Add yaml dashboards
-  dashboards:
-    details-dash:
-      mode: yaml
-      title: Details
-      icon: mdi:chart-bar
-      show_in_sidebar: true
-      filename: includes/dashboards/details.yaml
 
 group: !include groups.yaml
 automation: !include automations.yaml
