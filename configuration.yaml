@@ -7,7 +7,6 @@ tts:
 
 lovelace:
   mode: yaml
-
   # Add yaml dashboards
   dashboards:
     details-dash:

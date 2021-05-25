@@ -1,7 +1,7 @@
 title: Bunkeflovägen
 views:
   - panel: false
-    title: Bunkeflovägen 47
+    title: Home
     badges:
       - entity: person.andreas_olsson
       - entity: person.evelina_mattsson
@@ -18,30 +18,6 @@ views:
           - entity: input_boolean.guest_mode
           - entity: input_boolean.vacation_mode
         state_color: true
-      - type: entities
-        entities:
-          - entity: scene.slackt_nedanvaning
-            icon: "mdi:lightbulb-off-outline"
-          - entity: scene.tant_nedanvaning
-            icon: "mdi:lightbulb-outline"
-          - entity: scene.mysbelysning_nedanvaning
-            icon: "mdi:lightbulb-outline"
-          - entity: scene.smartplugs_pa
-            icon: "mdi:power-plug-outline"
-          - entity: scene.smartplugs_av
-            icon: "mdi:power-plug-off-outline"
-          - entity: scene.tant_matbord
-            icon: "mdi:table-furniture"
-          - entity: scene.slackt_matbord
-            icon: "mdi:table-furniture"
-          - entity: scene.babyrum_tant
-            icon: "mdi:baby"
-          - entity: scene.babyrum_slackt
-            icon: "mdi:baby"
-          - entity: scene.tant_sovrum
-            icon: "mdi:bed"
-          - entity: scene.slackt_sovrum
-            icon: "mdi:bed"
       - content: >-
           ## Quarantine-o-meter
 
@@ -73,27 +49,6 @@ views:
               yellow: 80
               red: 0
             name: Andreas
-      - type: glance
-        title: Control Panel
-        entities:
-          - entity: light.hall_1
-          - entity: light.hall_2
-          - entity: light.hall_3
-          - entity: light.ytterdorr_1
-          - entity: light.ytterdorr_2
-          - entity: light.ytterdorr_3
-          - entity: light.sovrum_1
-          - entity: light.koksbord
-          - entity: light.matbord_1
-          - entity: light.matbord_2
-          - entity: light.matbord_3
-          - entity: light.matbord_4
-          - entity: switch.andreas_rum
-          - entity: switch.bebisrum
-          - entity: switch.bredvid_tv
-          - entity: switch.runt_fonster
-          - entity: switch.smart_plug_upstairs_livingroom
-        state_color: true
       - type: grid
         title: Temperatures
         columns: 2
@@ -164,3 +119,89 @@ views:
               yellow: 80
               red: 0
             name: Used capacity (DS415)
+  - panel: false
+    title: Controls
+    icon: mdi:remote
+    cards:
+      - type: glance
+        title: Control Panel
+        entities:
+          - entity: light.hall_1
+          - entity: light.hall_2
+          - entity: light.hall_3
+          - entity: light.ytterdorr_1
+          - entity: light.ytterdorr_2
+          - entity: light.ytterdorr_3
+          - entity: light.sovrum_1
+          - entity: light.koksbord
+          - entity: light.matbord_1
+          - entity: light.matbord_2
+          - entity: light.matbord_3
+          - entity: light.matbord_4
+          - entity: switch.andreas_rum
+          - entity: switch.bebisrum
+          - entity: switch.bredvid_tv
+          - entity: switch.runt_fonster
+          - entity: switch.smart_plug_upstairs_livingroom
+        state_color: true
+      - type: entities
+        entities:
+          - entity: scene.slackt_nedanvaning
+            icon: "mdi:lightbulb-off-outline"
+          - entity: scene.tant_nedanvaning
+            icon: "mdi:lightbulb-outline"
+          - entity: scene.mysbelysning_nedanvaning
+            icon: "mdi:lightbulb-outline"
+          - entity: scene.smartplugs_pa
+            icon: "mdi:power-plug-outline"
+          - entity: scene.smartplugs_av
+            icon: "mdi:power-plug-off-outline"
+          - entity: scene.tant_matbord
+            icon: "mdi:table-furniture"
+          - entity: scene.slackt_matbord
+            icon: "mdi:table-furniture"
+          - entity: scene.babyrum_tant
+            icon: "mdi:baby"
+          - entity: scene.babyrum_slackt
+            icon: "mdi:baby"
+          - entity: scene.tant_sovrum
+            icon: "mdi:bed"
+          - entity: scene.slackt_sovrum
+            icon: "mdi:bed"
+  - panel: false
+    title: Details
+    icon: mdi:chart-bar
+    cards:
+      - type: entities
+        title: Sensor Details
+        entities:
+          - entity: sensor.humidity_26
+            name: Livingroom Humidity
+          - entity: sensor.pressure_27
+            name: Livingroom Pressure
+          - entity: sensor.temperature_25_battery_level
+            name: Livingroom Battery
+          - entity: sensor.patio_humidity_2
+            name: Patio Humidity
+          - entity: sensor.patio_pressure_2
+            name: Patio Pressure
+          - entity: sensor.patio_sensor_battery_level
+            name: Patio Battery
+          - entity: sensor.andreas_humidity
+            name: Andreas room Humidity
+          - entity: sensor.andreas_pressure
+            name: Andreas room Pressure
+          - entity: sensor.andreas_sensor_battery_level
+            name: Andreas room Battery
+          - entity: sensor.bedroom_humidity
+            name: Bedroom Humidity
+          - entity: sensor.bedroom_pressure
+            name: Bedroom Pressure
+          - entity: sensor.bedroom_sensor_battery_level
+            name: Bedroom Battery
+          - entity: binary_sensor.downstairs_water
+          - entity: sensor.downstairs_water_battery_level
+            name: Downstairs Watersensor Battery
+          - entity: binary_sensor.upstairs_water
+          - entity: sensor.upstairs_water_battery_level
+            name: Upstairs Watersensor Battery
