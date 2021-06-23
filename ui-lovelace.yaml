@@ -1,3 +1,4 @@
+background: var(--background-image)
 title: Bunkeflovägen
 views:
   - panel: false

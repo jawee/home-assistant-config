@@ -19,6 +19,9 @@ logger: !include includes/logger.yaml
 discovery: !include includes/discovery.yaml
 zone: !include includes/zones.yaml
 
+frontend:
+  themes: !include_dir_merge_named themes
+
 # asuswrt:
 #   host: 192.168.1.1
 #   username: !secret router_username
