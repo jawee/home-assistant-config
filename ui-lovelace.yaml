@@ -51,7 +51,6 @@ views:
               red: 0
             name: Andreas
       - type: grid
-        title: Temperatures
         columns: 2
         cards:
           - type: sensor
@@ -78,8 +77,13 @@ views:
             hours_to_show: 24
             detail: 1
             icon: "mdi:thermometer"
+          - type: sensor
+            entity: sensor.nursery_temperature
+            graph: line
+            hours_to_show: 24
+            detail: 1
+            icon: "mdi:thermometer"
       - type: grid
-        title: 7 Day Stats
         columns: 3
         cards:
           - type: entity
@@ -200,6 +204,10 @@ views:
             name: Bedroom Pressure
           - entity: sensor.bedroom_sensor_battery_level
             name: Bedroom Battery
+          - entity: sensor.nursery_humidity
+            name: Nursery Humidity
+          - entity: sensor.nursery_pressure
+            name: Nursery Pressure
           - entity: binary_sensor.downstairs_water
           - entity: sensor.downstairs_water_battery_level
             name: Downstairs Watersensor Battery
