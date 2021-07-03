@@ -208,6 +208,8 @@ views:
             name: Nursery Humidity
           - entity: sensor.nursery_pressure
             name: Nursery Pressure
+          - entity: sensor.nursery_sensor_battery_level
+            name: Nursery Battery
           - entity: binary_sensor.downstairs_water
           - entity: sensor.downstairs_water_battery_level
             name: Downstairs Watersensor Battery
