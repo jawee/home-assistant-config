@@ -178,6 +178,38 @@ views:
     icon: mdi:chart-bar
     cards:
       - type: entities
+        title: Pi-hole
+        entities:
+          - entity: sensor.pi_hole_dns_queries_today
+            name: Queries
+          - entity: sensor.pi_hole_ads_blocked_today
+            name: Ads blocked
+          - entity: sensor.pi_hole_ads_percentage_blocked_today
+            name: "% Blocked today"
+      - type: entities
+        title: DS415
+        entities:
+          - entity: sensor.ds415_drive_1_status
+            name: Drive 1 Status
+          - entity: sensor.ds415_drive_1_temperature
+            name: Drive 1 Temperature
+          - entity: sensor.ds415_drive_2_status
+            name: Drive 2 Status
+          - entity: sensor.ds415_drive_2_temperature
+            name: Drive 2 Temperature
+          - entity: sensor.ds415_drive_3_status
+            name: Drive 3 Status
+          - entity: sensor.ds415_drive_3_temperature
+            name: Drive 3 Temperature
+          - entity: sensor.ds415_drive_4_status
+            name: Drive 4 Status
+          - entity: sensor.ds415_drive_4_temperature
+            name: Drive 4 Temperature
+          - entity: binary_sensor.ds415_update_available
+            name: Update Available
+          - entity: binary_sensor.ds415_security_status
+            name: Security Status
+      - type: entities
         title: Sensor Details
         entities:
           - entity: sensor.humidity_26
