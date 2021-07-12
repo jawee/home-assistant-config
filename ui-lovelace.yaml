@@ -189,6 +189,10 @@ views:
       - type: entities
         title: DS415
         entities:
+          - entity: binary_sensor.ds415_update_available
+            name: Update Available
+          - entity: binary_sensor.ds415_security_status
+            name: Security Status
           - entity: sensor.ds415_drive_1_status
             name: Drive 1 Status
           - entity: sensor.ds415_drive_1_temperature
@@ -205,10 +209,6 @@ views:
             name: Drive 4 Status
           - entity: sensor.ds415_drive_4_temperature
             name: Drive 4 Temperature
-          - entity: binary_sensor.ds415_update_available
-            name: Update Available
-          - entity: binary_sensor.ds415_security_status
-            name: Security Status
       - type: entities
         title: Sensor Details
         entities:
