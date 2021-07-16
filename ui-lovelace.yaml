@@ -145,7 +145,7 @@ views:
           - entity: light.matbord_4
           - entity: switch.andreas_rum
           - entity: switch.bebisrum
-          - entity: switch.bredvid_tv
+          - entity: switch.smart_plug_downstairs_livingroom
           - entity: switch.runt_fonster
           - entity: switch.smart_plug_upstairs_livingroom
         state_color: true
