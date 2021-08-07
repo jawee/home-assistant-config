@@ -14,6 +14,16 @@ views:
       - type: weather-forecast
         entity: weather.bunkeflovagen_47
       - type: entities
+        title: Alarm
+        entities:
+          - entity: alarm_control_panel.sector_alarmpanel_02147689
+            name: Alarm
+          - entity: sensor.sector_overvaning_244014a747f
+            name: Upstairs
+          - entity: sensor.sector_undervaning_245014b6124
+            name: Downstairs
+        state_color: true
+      - type: entities
         entities:
           - entity: input_boolean.home_mode
           - entity: input_boolean.guest_mode
