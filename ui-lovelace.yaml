@@ -28,16 +28,6 @@ views:
           - entity: sensor.sector_undervaning_245014b6124
             name: Downstairs
         state_color: true
-      - content: >-
-          ## Quarantine-o-meter
-
-          The gauge meters display the amount of time spend at home in the last
-          14 days. Where Andreas left the house (on average) {{
-          (states("sensor.quarantine_meter_andreas_times_left")|int / 14) |
-          round(1) }} times per day and Evelina {{
-          (states("sensor.quarantine_meter_evelina_times_left")|int / 14) |
-          round(1) }} times per day.
-        type: markdown
       - type: grid
         columns: 2
         cards:
@@ -49,7 +39,7 @@ views:
               green: 95
               yellow: 80
               red: 0
-            name: Evelina
+            name: Evelina home
           - type: gauge
             entity: sensor.quarantine_meter_andreas
             min: 0
@@ -58,7 +48,22 @@ views:
               green: 95
               yellow: 80
               red: 0
-            name: Andreas
+            name: Andreas home
+      - type: grid
+        columns: 3
+        cards:
+          - type: entity
+            entity: sensor.bedroom_tv_turned_on_on_last_7_days
+            name: Bedroom
+            icon: "mdi:bed-king-outline"
+          - type: entity
+            entity: sensor.livingroom_tv_turned_on_last_7_days
+            name: Livingroom
+            icon: "mdi:television"
+          - type: entity
+            entity: sensor.plex_streaming_hours_last_7_days
+            name: Plex
+            icon: "mdi:plex"
       - type: grid
         columns: 2
         cards:
@@ -92,47 +97,6 @@ views:
             hours_to_show: 24
             detail: 1
             icon: "mdi:thermometer"
-      - type: grid
-        columns: 3
-        cards:
-          - type: entity
-            entity: sensor.bedroom_tv_turned_on_on_last_7_days
-            name: Bedroom
-            icon: "mdi:bed-king-outline"
-          - type: entity
-            entity: sensor.livingroom_tv_turned_on_last_7_days
-            name: Livingroom
-            icon: "mdi:television"
-          - type: entity
-            entity: sensor.plex_streaming_hours_last_7_days
-            name: Plex
-            icon: "mdi:plex"
-      - type: grid
-        columns: 2
-        cards:
-          - type: sensor
-            entity: sensor.transmission_down_speed
-            name: Download Speed
-            graph: line
-            hours_to_show: 24
-            detail: 2
-            icon: "mdi:download-network-outline"
-          - type: sensor
-            entity: sensor.transmission_up_speed
-            name: Upload Speed
-            graph: line
-            hours_to_show: 24
-            detail: 2
-            icon: "mdi:upload-network-outline"
-          - type: gauge
-            entity: sensor.ds415_volume_1_volume_used
-            min: 0
-            max: 100
-            severity:
-              green: 95
-              yellow: 80
-              red: 0
-            name: Used capacity (DS415)
   - panel: false
     title: Controls
     icon: mdi:remote
@@ -218,6 +182,8 @@ views:
             name: Drive 4 Status
           - entity: sensor.ds415_drive_4_temperature
             name: Drive 4 Temperature
+          - entity: sensor.ds415_volume_1_volume_used
+            name: Used capacity
       - type: entities
         title: Sensor Details
         entities:
