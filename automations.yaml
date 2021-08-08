@@ -212,9 +212,9 @@
     state: 'on'
   - condition: sun
     before: sunrise
-    before_offset: -00:45:00
+    before_offset: 00:45:00
     after: sunset
-    after_offset: -00:45:00
+    after_offset: 00:45:00
   action:
   - scene: scene.babyrum_tant
   mode: single
