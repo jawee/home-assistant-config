@@ -18,7 +18,7 @@
       - thu
       - fri
   action:
-  - scene: scene.tant_nedanvaning
+  - scene: scene.mysbelysning_nedanvaning
   mode: single
 - id: '1598456107080'
   alias: Turn the lights off at 6:00
@@ -31,7 +31,7 @@
     conditions:
     - condition: state
       entity_id: person.andreas_olsson
-      state: '"away"'
+      state: not_home
     - condition: time
       weekday:
       - mon
@@ -211,10 +211,8 @@
     entity_id: input_boolean.home_mode
     state: 'on'
   - condition: sun
-    before: sunrise
-    before_offset: 00:45:00
     after: sunset
-    after_offset: 00:45:00
+    after_offset: -00:45:00
   action:
   - scene: scene.babyrum_tant
   mode: single
