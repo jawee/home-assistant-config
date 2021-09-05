@@ -25,6 +25,7 @@ appdaemon/dashboards/
 home-assistant_v2.db
 home-assistant_v2.db.bak
 *.log
+*.log.*
 tts/
 webostv.conf
 notebooks/
