@@ -19,15 +19,6 @@ views:
           - entity: input_boolean.guest_mode
           - entity: input_boolean.vacation_mode
         state_color: true
-      - type: entities
-        entities:
-          - entity: alarm_control_panel.sector_alarmpanel_02147689
-            name: Alarm status
-          - entity: sensor.sector_overvaning_244014a747f
-            name: Upstairs
-          - entity: sensor.sector_undervaning_245014b6124
-            name: Downstairs
-        state_color: true
       - type: grid
         columns: 2
         cards:
