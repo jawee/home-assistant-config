@@ -7,6 +7,9 @@ tts:
 
 lovelace:
   mode: yaml
+  resources:
+    - url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
+      type: module
 
 group: !include groups.yaml
 automation: !include automations.yaml

@@ -58,36 +58,61 @@ views:
       - type: grid
         columns: 2
         cards:
-          - type: sensor
-            entity: sensor.temperature_25
-            graph: line
-            hours_to_show: 24
-            detail: 1
-            icon: "mdi:thermometer"
-          - type: sensor
-            entity: sensor.bedroom_temperature
-            graph: line
-            hours_to_show: 24
-            detail: 1
-            icon: "mdi:thermometer"
-          - type: sensor
-            entity: sensor.andreas_temperature
-            graph: line
-            hours_to_show: 24
-            detail: 1
-            icon: "mdi:thermometer"
-          - type: sensor
-            entity: sensor.patio_temperature_2
-            graph: line
-            hours_to_show: 24
-            detail: 1
-            icon: "mdi:thermometer"
-          - type: sensor
-            entity: sensor.nursery_temperature
-            graph: line
-            hours_to_show: 24
-            detail: 1
-            icon: "mdi:thermometer"
+          - type: "custom:mini-graph-card"
+            show:
+              extrema: true
+            entities:
+              - entity: sensor.temperature_25
+            name: "Livingroom Temperature"
+            decimals: 1
+            points_per_hour: 2
+            hour24: true
+            font_size_header: 12
+            font_size: 90
+          - type: "custom:mini-graph-card"
+            show:
+              extrema: true
+            entities:
+              - entity: sensor.bedroom_temperature
+            name: "Bedroom Temperature"
+            decimals: 1
+            points_per_hour: 2
+            hour24: true
+            font_size_header: 12
+            font_size: 90
+          - type: "custom:mini-graph-card"
+            show:
+              extrema: true
+            entities:
+              - entity: sensor.bedroom_temperature
+            name: "Andreas Room Temperature"
+            decimals: 1
+            points_per_hour: 2
+            hour24: true
+            font_size_header: 12
+            font_size: 90
+          - type: "custom:mini-graph-card"
+            show:
+              extrema: true
+            entities:
+              - entity: sensor.nursery_temperature
+            name: "Nursery Temperature"
+            decimals: 1
+            points_per_hour: 2
+            hour24: true
+            font_size_header: 12
+            font_size: 90
+          - type: "custom:mini-graph-card"
+            show:
+              extrema: true
+            entities:
+              - entity: sensor.patio_temperature_2
+            name: "Patio Temperature"
+            decimals: 1
+            points_per_hour: 2
+            hour24: true
+            font_size_header: 12
+            font_size: 90
   - panel: false
     title: Controls
     icon: mdi:remote
