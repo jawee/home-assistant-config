@@ -10,6 +10,8 @@ lovelace:
   resources:
     - url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
       type: module
+    - url: /hacsfiles/lovelace-slider-entity-row/slider-entity-row.js
+      type: module
 
 group: !include groups.yaml
 automation: !include automations.yaml
@@ -21,20 +23,10 @@ input_boolean: !include input_booleans.yaml
 logger: !include includes/logger.yaml
 discovery: !include includes/discovery.yaml
 zone: !include includes/zones.yaml
+light: !include includes/lights.yaml
 
 frontend:
   themes: !include_dir_merge_named themes
-
-# asuswrt:
-#   host: 192.168.1.1
-#   username: !secret router_username
-#   password: !secret router_password
-#   sensors:
-#     - devices
-#     - upload
-#     - download
-#     - upload_speed
-#     - download_speed
 
 device_tracker:
   - platform: nmap_tracker

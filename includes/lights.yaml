@@ -1,0 +1,19 @@
+- platform: group
+  name: Ytterdörr
+  entities:
+    - light.ytterdorr_1
+    - light.ytterdorr_2
+    - light.ytterdorr_3
+- platform: group
+  name: Hall
+  entities:
+    - light.hall_1
+    - light.hall_2
+    - light.hall_3
+- platform: group
+  name: Matbord
+  entities:
+    - light.matbord_1
+    - light.matbord_2
+    - light.matbord_3
+    - light.matbord_4

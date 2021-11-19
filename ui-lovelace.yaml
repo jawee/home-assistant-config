@@ -117,27 +117,30 @@ views:
     title: Controls
     icon: mdi:remote
     cards:
-      - type: glance
+      - type: entities
         title: Control Panel
         entities:
-          - entity: light.hall_1
-          - entity: light.hall_2
-          - entity: light.hall_3
-          - entity: light.ytterdorr_1
-          - entity: light.ytterdorr_2
-          - entity: light.ytterdorr_3
-          - entity: light.sovrum_1
-          - entity: light.koksbord
-          - entity: light.matbord_1
-          - entity: light.matbord_2
-          - entity: light.matbord_3
-          - entity: light.matbord_4
-          - entity: switch.andreas_rum
-          - entity: switch.bebisrum
-          - entity: switch.smart_plug_downstairs_livingroom
-          - entity: switch.runt_fonster
-          - entity: switch.smart_plug_upstairs_livingroom
+          - type: "custom:slider-entity-row"
+            entity: light.hall
+            toggle: true
+          - type: "custom:slider-entity-row"
+            entity: light.ytterdorr
+            toggle: true
+          - type: "custom:slider-entity-row"
+            entity: light.matbord
+            toggle: true
+          - type: "custom:slider-entity-row"
+            entity: light.sovrum_1
+            toggle: true
+          - type: "custom:slider-entity-row"
+            entity: light.koksbord
+            toggle: true
+          - switch.andreas_rum
+          - switch.smart_plug_downstairs_livingroom
+          - switch.runt_fonster
+          - switch.smart_plug_upstairs_livingroom
         state_color: true
+        show_header_toggle: false
       - type: entities
         entities:
           - entity: scene.slackt_nedanvaning
