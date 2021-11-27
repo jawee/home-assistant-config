@@ -288,6 +288,9 @@
     switch.smart_plug_upstairs_livingroom:
       friendly_name: Vardagsrum Uppe
       state: 'on'
+    switch.andreas_rum:
+      friendly_name: Andreas rum
+      state: 'on'
   icon: mdi:power-socket-eu
 - id: '1607178339103'
   name: Smartplugs Av
@@ -301,6 +304,9 @@
     switch.smart_plug_upstairs_livingroom:
       friendly_name: Vardagsrum Uppe
       state: 'off'
+    switch.andreas_rum:
+      friendly_name: Andreas rum
+      state: 'on'
   icon: mdi:power-socket-eu
 - id: '1607802995256'
   name: Tänt matbord
