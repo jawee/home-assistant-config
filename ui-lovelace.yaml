@@ -139,6 +139,7 @@ views:
           - switch.smart_plug_downstairs_livingroom
           - switch.runt_fonster
           - switch.smart_plug_upstairs_livingroom
+          - switch.bebisrum
         state_color: true
         show_header_toggle: false
       - type: entities
