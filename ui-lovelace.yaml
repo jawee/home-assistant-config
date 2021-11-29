@@ -84,7 +84,7 @@ views:
             show:
               extrema: true
             entities:
-              - entity: sensor.bedroom_temperature
+              - entity: sensor.andreas_temperature
             name: "Andreas Room Temperature"
             decimals: 1
             points_per_hour: 2
