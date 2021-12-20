@@ -41,21 +41,6 @@ views:
               red: 0
             name: Andreas home
       - type: grid
-        columns: 3
-        cards:
-          - type: entity
-            entity: sensor.bedroom_tv_turned_on_on_last_7_days
-            name: Bedroom
-            icon: "mdi:bed-king-outline"
-          - type: entity
-            entity: sensor.livingroom_tv_turned_on_last_7_days
-            name: Livingroom
-            icon: "mdi:television"
-          - type: entity
-            entity: sensor.plex_streaming_hours_last_7_days
-            name: Plex
-            icon: "mdi:plex"
-      - type: grid
         columns: 2
         cards:
           - type: "custom:mini-graph-card"
