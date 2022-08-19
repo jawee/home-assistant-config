@@ -164,33 +164,30 @@ views:
             name: Ads blocked
           - entity: sensor.pi_hole_ads_percentage_blocked_today
             name: "% Blocked today"
-      - type: grid
-        columns: 2
-        cards:
-          - type: "custom:mini-graph-card"
-            show:
-              extrema: true
-              average: true
-            entities:
-              - entity: sensor.speedtest_download
-            name: "Download"
-            decimals: 1
-            points_per_hour: 2
-            hour24: true
-            font_size_header: 12
-            font_size: 90
-          - type: "custom:mini-graph-card"
-            show:
-              extrema: true
-              average: true
-            entities:
-              - entity: sensor.speedtest_upload
-            name: "Upload"
-            decimals: 1
-            points_per_hour: 2
-            hour24: true
-            font_size_header: 12
-            font_size: 90
+      - type: "custom:mini-graph-card"
+        show:
+          extrema: true
+          average: true
+        entities:
+          - entity: sensor.speedtest_download
+        name: "Download"
+        decimals: 1
+        points_per_hour: 2
+        hour24: true
+        font_size_header: 12
+        font_size: 90
+      - type: "custom:mini-graph-card"
+        show:
+          extrema: true
+          average: true
+        entities:
+          - entity: sensor.speedtest_upload
+        name: "Upload"
+        decimals: 1
+        points_per_hour: 2
+        hour24: true
+        font_size_header: 12
+        font_size: 90
       - type: entities
         title: DS415
         entities:
