@@ -155,18 +155,32 @@ views:
     title: Details
     icon: mdi:chart-bar
     cards:
-      - type: "custom:mini-graph-card"
-        show:
-          extrema: true
-          average: true
+      - type: entities
+        title: Electricity
+        icon: mdi:flash
+        show_header_toggle: false
         entities:
-          - entity: sensor.nordpool_kwh_se4_eur_3_095_025
-        name: "Electricity price"
-        decimals: 4
-        points_per_hour: 2
-        hour24: true
-        font_size_header: 12
-        font_size: 90
+          - entity: sensor.nordpool_kwh_se4_sek_3_095_025
+            name: Current price
+            icon: mdi:cash-multiple
+          - entity: sensor.nordpool_kwh_se4_sek_3_095_025
+            type: attribute
+            name: Min price
+            suffix: SEK/kWh
+            attribute: min
+            icon: mdi:cash-multiple
+          - entity: sensor.nordpool_kwh_se4_sek_3_095_025
+            type: attribute
+            name: Max price
+            suffix: SEK/kWh
+            attribute: max
+            icon: mdi:cash-multiple
+          - entity: sensor.nordpool_kwh_se4_sek_3_095_025
+            type: attribute
+            name: Average price
+            suffix: SEK/kWh
+            attribute: average
+            icon: mdi:cash-multiple
       - type: entities
         title: Pi-hole
         entities:
