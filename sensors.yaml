@@ -67,7 +67,7 @@
 
 - platform: nordpool
   # Should the prices include vat? Default True
-  VAT: True
+  VAT: false
   # What currency the api fetches the prices in
   # this is only need if you want a sensor in a non local currency
   currency: "SEK"

@@ -19,6 +19,21 @@ views:
           - entity: input_boolean.guest_mode
           - entity: input_boolean.vacation_mode
         state_color: true
+      - type: custom:mini-graph-card
+        entities:
+          - entity: sensor.quarantine_meter_andreas
+            color: green
+            show_state: false
+          - entity: sensor.quarantine_meter_evelina
+            color: orange
+            show_state: false
+        name: Quarantine Meter
+        hours_to_show: 168
+        show:
+          name: true
+          legend: true
+          icon: false
+          labels: true
       - type: grid
         columns: 2
         cards:
@@ -160,22 +175,22 @@ views:
         icon: mdi:flash
         show_header_toggle: false
         entities:
-          - entity: sensor.nordpool_kwh_se4_sek_3_095_025
+          - entity: sensor.nordpool_kwh_se4_sek_3_095_0
             name: Current price
             icon: mdi:cash-multiple
-          - entity: sensor.nordpool_kwh_se4_sek_3_095_025
+          - entity: sensor.nordpool_kwh_se4_sek_3_095_0
             type: attribute
             name: Min price
             suffix: SEK/kWh
             attribute: min
             icon: mdi:cash-multiple
-          - entity: sensor.nordpool_kwh_se4_sek_3_095_025
+          - entity: sensor.nordpool_kwh_se4_sek_3_095_0
             type: attribute
             name: Max price
             suffix: SEK/kWh
             attribute: max
             icon: mdi:cash-multiple
-          - entity: sensor.nordpool_kwh_se4_sek_3_095_025
+          - entity: sensor.nordpool_kwh_se4_sek_3_095_0
             type: attribute
             name: Average price
             suffix: SEK/kWh
