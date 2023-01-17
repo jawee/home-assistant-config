@@ -279,20 +279,20 @@
 - id: '1607178306256'
   name: Smartplugs På
   entities:
-    switch.runt_fonster:
-      friendly_name: Runt fönster
-      state: 'on'
     switch.smart_plug_downstairs_livingroom:
       friendly_name: Bredvid Tv
       state: 'on'
     switch.smart_plug_upstairs_livingroom:
       friendly_name: Vardagsrum Uppe
       state: 'on'
-    switch.andreas_rum:
-      friendly_name: Andreas rum
+    switch.smart_plug_kontor:
+      friendly_name: Smart Plug Kontor
       state: 'on'
-    switch.bebisrum:
-      friendly_name: 'Bebisrum '
+    switch.smart_plug_livias_rum:
+      friendly_name: Smart Plug Livias rum
+      state: 'on'
+    switch.smart_plug_runt_fonster:
+      friendly_name: Runt Fönster
       state: 'on'
   icon: mdi:power-socket-eu
   metadata: {}
@@ -302,17 +302,17 @@
     switch.smart_plug_downstairs_livingroom:
       friendly_name: Bredvid Tv
       state: 'off'
-    switch.runt_fonster:
-      friendly_name: Runt fönster
-      state: 'off'
     switch.smart_plug_upstairs_livingroom:
       friendly_name: Vardagsrum Uppe
       state: 'off'
-    switch.andreas_rum:
-      friendly_name: Andreas rum
+    switch.smart_plug_livias_rum:
+      friendly_name: Smart Plug Livias rum
       state: 'off'
-    switch.bebisrum:
-      friendly_name: 'Bebisrum '
+    switch.smart_plug_kontor:
+      friendly_name: Smart Plug Kontor
+      state: 'off'
+    switch.smart_plug_runt_fonster:
+      friendly_name: Smart Plug Runt Fönster
       state: 'off'
   icon: mdi:power-socket-eu
   metadata: {}
