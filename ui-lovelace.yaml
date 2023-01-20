@@ -293,3 +293,14 @@ views:
           - entity: binary_sensor.upstairs_water
           - entity: sensor.upstairs_water_battery_level
             name: Upstairs Watersensor Battery
+      - type: entities
+        title: Plex
+        entities:
+          - entity: sensor.plex_proxmox_plex
+            name: Status
+          - entity: sensor.proxmox_plex_library_movies
+            name: Movies
+          - entity: sensor.proxmox_plex_library_tv_shows
+            name: TV Shows
+          - entity: sensor.proxmox_plex_library_klipp
+            name: Clips
