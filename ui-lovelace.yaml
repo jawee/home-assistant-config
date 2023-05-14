@@ -130,7 +130,7 @@ views:
             entity: light.matbord
             toggle: true
           - type: "custom:slider-entity-row"
-            entity: light.sovrum_1
+            entity: light.sovrum
             toggle: true
           - type: "custom:slider-entity-row"
             entity: light.koksbord
