@@ -62,6 +62,19 @@ views:
             show:
               extrema: true
             entities:
+              - entity: sensor.air_purifier_vardagsrum_air_quality
+          - type: "custom:mini-graph-card"
+            show:
+              extrema: true
+            entities:
+              - entity: sensor.air_purifier_sovrum_air_quality
+      - type: grid
+        columns: 2
+        cards:
+          - type: "custom:mini-graph-card"
+            show:
+              extrema: true
+            entities:
               - entity: sensor.temperature_25
             name: "Livingroom Temperature"
             decimals: 1
