@@ -23,9 +23,11 @@ views:
           - entity: sensor.quarantine_meter_andreas
             color: green
             show_state: false
+            name: Andreas
           - entity: sensor.quarantine_meter_evelina
             color: orange
             show_state: false
+            name: Evelina
         name: Quarantine Meter
         hours_to_show: 168
         show:
@@ -33,6 +35,8 @@ views:
           legend: true
           icon: false
           labels: true
+          indicator: false
+          state: false
       - type: grid
         columns: 2
         cards:
@@ -71,12 +75,12 @@ views:
         show:
           extrema: true
           average: true
+          graph: bar
         entities:
           - entity: sensor.power_c09e1e79cf58
-        name: "Electricity usage"
+        name: "Energy consumption"
+        points_per_hour: 1
         decimals: 0
-        points_per_hour: 2
-        hour24: true
       - type: "custom:mini-graph-card"
         name: Motion
         hours_to_show: 24
@@ -244,29 +248,23 @@ views:
           - entity: sensor.pi_hole_ads_percentage_blocked_today
             name: "% Blocked today"
       - type: "custom:mini-graph-card"
-        show:
-          extrema: true
-          average: true
         entities:
           - entity: sensor.speedtest_download
-        name: "Download"
-        decimals: 1
-        points_per_hour: 2
-        hour24: true
-        font_size_header: 12
-        font_size: 90
-      - type: "custom:mini-graph-card"
-        show:
-          extrema: true
-          average: true
-        entities:
+            name: Download
           - entity: sensor.speedtest_upload
-        name: "Upload"
-        decimals: 1
+            name: Upload
+        name: "Internet Speed"
+        decimals: 0
         points_per_hour: 2
         hour24: true
-        font_size_header: 12
         font_size: 90
+        show:
+          name: true
+          legend: true
+          icon: false
+          labels: true
+          indicator: false
+          state: false
       - type: entities
         title: DS415
         entities:
