@@ -319,39 +319,40 @@
 - id: '1607802995256'
   name: Tänt matbord
   entities:
-    light.matbord_1:
-      supported_color_modes:
-      - brightness
-      color_mode: brightness
-      brightness: 102
-      friendly_name: Matbord 1
-      supported_features: 33
-      state: 'on'
     light.matbord_2:
       supported_color_modes:
       - brightness
       color_mode: brightness
       brightness: 102
       friendly_name: Matbord 2
-      supported_features: 33
+      supported_features: 0
       state: 'on'
-    light.matbord_3:
+    light.matbord_1_8:
       supported_color_modes:
       - brightness
       color_mode: brightness
-      brightness: 102
+      brightness: 96.9
+      friendly_name: Matbord 1
+      supported_features: 0
+      state: 'on'
+    light.matbord_3_4:
+      supported_color_modes:
+      - brightness
+      color_mode: brightness
+      brightness: 63.75
       friendly_name: Matbord 3
-      supported_features: 33
+      supported_features: 0
       state: 'on'
-    light.matbord_4:
+    light.matbord_4_7:
       supported_color_modes:
       - brightness
       color_mode: brightness
-      brightness: 102
+      brightness: 63.75
       friendly_name: Matbord 4
-      supported_features: 33
+      supported_features: 0
       state: 'on'
   icon: mdi:food-turkey
+  metadata: {}
 - id: '1607803078855'
   name: Släckt matbord
   entities:

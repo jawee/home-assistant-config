@@ -4,12 +4,35 @@ views:
   - title: Home
     badges:
       - entity: person.andreas_olsson
+        name: "Andreas"
+        display_type: complete
       - entity: person.evelina_mattsson
+        name: "Evelina"
+        display_type: complete
       - entity: sensor.192_168_1_1_devices_connected
+        name: "Devices"
+        display_type: complete
       - entity: sensor.192_168_1_1_download_speed
+        name: "Download"
+        display_type: complete
       - entity: sensor.192_168_1_1_upload_speed
+        name: "Upload"
+        display_type: complete
       - entity: sun.sun
+        display_type: complete
     cards:
+      - type: custom:button-card
+        name: Entrance Door Locked
+        entity: lock.entrance
+        icon: mdi:door-closed
+        color: rgb(255, 0, 0)
+        state:
+          - value: "unlocked"
+            name: Entrance Door Unlocked
+            icon: mdi:door-open
+            color: rgb(0, 255, 0)
+        lock:
+          enabled: true
       - type: weather-forecast
         entity: weather.bunkeflovagen_47
       - type: entities
@@ -329,6 +352,8 @@ views:
           - entity: binary_sensor.upstairs_water
           - entity: sensor.upstairs_water_battery_level
             name: Upstairs Watersensor Battery
+          - entity: sensor.entrance_battery
+            name: Entrance Door Battery
       - type: entities
         title: Plex
         entities:

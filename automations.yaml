@@ -18,13 +18,26 @@
       - thu
       - fri
   action:
-  - scene: scene.mysbelysning_nedanvaning
+  - service: switch.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: switch.smart_plug_downstairs_livingroom
+  - service: light.turn_on
+    metadata: {}
+    data:
+      brightness_pct: 15
+    target:
+      entity_id:
+      - light.ytterdorr_1
+      - light.ytterdorr_2
+      - light.ytterdorr_3
   mode: single
 - id: '1598456107080'
-  alias: Turn the lights off at 6:00
+  alias: Turn the lights off at 6:20
   description: ''
   trigger:
-  - at: 06:00:00
+  - at: 06:20:00
     platform: time
   condition:
   - condition: and
@@ -41,6 +54,10 @@
       - fri
   action:
   - scene: scene.slackt_nedanvaning
+  - type: turn_off
+    device_id: 175077a5c4301e0b0efe9f011d5ae298
+    entity_id: e54a7c66dfaf34bc5d3ec821ebb99ac0
+    domain: switch
   mode: single
 - id: '1598595594520'
   alias: Turn on - Home mode
@@ -233,12 +250,11 @@
   trigger:
   - platform: state
     entity_id:
-    - person.andreas_olsson
-    - person.evelina_mattsson
-    to: not_home
+    - input_boolean.home_mode
+    to: 'off'
     for:
       hours: 0
-      minutes: 30
+      minutes: 20
       seconds: 0
   condition: []
   action:
