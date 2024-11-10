@@ -270,27 +270,57 @@ views:
             name: Ads blocked
           - entity: sensor.pi_hole_ads_percentage_blocked_today
             name: "% Blocked today"
-      - type: "custom:mini-graph-card"
-        entities:
-          - entity: sensor.speedtest_download
-            name: Download
-          - entity: sensor.speedtest_upload
-            name: Upload
-        name: "Internet Speed"
-        decimals: 0
-        points_per_hour: 2
-        hour24: true
-        font_size: 90
-        show:
-          name: true
-          legend: true
-          icon: false
-          labels: true
-          indicator: false
-          state: false
+      - type: grid
+        columns: 2
+        cards:
+          - type: "custom:mini-graph-card"
+            entities:
+              - entity: sensor.speedtest_download
+            name: "Download"
+            decimals: 0
+            points_per_hour: 2
+            hour24: true
+            font_size: 90
+            show:
+              extrema: true
+          - type: "custom:mini-graph-card"
+            entities:
+              - entity: sensor.speedtest_upload
+            name: "Upload"
+            decimals: 0
+            points_per_hour: 2
+            hour24: true
+            font_size: 90
+            show:
+              extrema: true
+      - type: grid
+        columns: 2
+        cards:
+          - type: "custom:mini-graph-card"
+            entities:
+              - entity: sensor.transmission_down_speed
+            name: "Transmission Download"
+            decimals: 0
+            points_per_hour: 2
+            hour24: true
+            font_size: 90
+            show:
+              extrema: true
+          - type: "custom:mini-graph-card"
+            entities:
+              - entity: sensor.transmission_up_speed
+            name: "Transmission Upload"
+            decimals: 0
+            points_per_hour: 2
+            hour24: true
+            font_size: 90
+            show:
+              extrema: true
       - type: entities
         title: DS415
         entities:
+          - entity: sensor.ds415_temperature
+            name: Temperature
           - entity: binary_sensor.ds415_security_status
             name: Security Status
           - entity: sensor.ds415_drive_1_status
