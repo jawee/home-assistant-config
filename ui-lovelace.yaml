@@ -264,12 +264,15 @@ views:
       - type: entities
         title: Pi-hole
         entities:
-          - entity: sensor.pi_hole_dns_queries_today
+          - entity: sensor.pi_hole_v6_dns_queries_today
             name: Queries
-          - entity: sensor.pi_hole_ads_blocked_today
+          - entity: sensor.pi_hole_v6_ads_blocked_today
             name: Ads blocked
-          - entity: sensor.pi_hole_ads_percentage_blocked_today
+          - entity: sensor.pi_hole_v6_ads_percentage_blocked_today
             name: "% Blocked today"
+          - entity: update.pi_hole_v6_core_update_available
+          - entity: update.pi_hole_v6_core_update_available
+          - entity: update.pi_hole_v6_ftl_update_available
       - type: grid
         columns: 2
         cards:
